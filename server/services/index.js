@@ -1,9 +1,15 @@
 const express = require('express');
+const router = require('../router/router');
 
 
 
 // App setup
 const app = express();
+
+
+
+// Router setup
+router(app);
 
 
 
