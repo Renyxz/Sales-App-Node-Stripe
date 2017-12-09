@@ -1,5 +1,7 @@
 const express = require('express');
+const Stripe = require('stripe');
 const router = require('../router/router');
+const config = require('./config/config');
 
 
 
@@ -10,6 +12,11 @@ const app = express();
 
 // Router setup
 router(app);
+
+
+
+// Stripe setup
+Stripe(config.secretKey);
 
 
 
